@@ -1,4 +1,4 @@
-## ** Team_7 **
+## **Team_7**
 
-## *** Curvetopia ***
+## ***Curvetopia***
 
