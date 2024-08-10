@@ -2,7 +2,7 @@ import regularize as rg
 import plot as p
 
 colours = ['r', 'g', 'b', 'y']
-pathXY=p.read_csv('problems\isolated.csv')
+pathXY=p.read_csv('..\problems\isolated.csv')
 regularized_path_XYs = []
 p.plot(pathXY,colours)
 
