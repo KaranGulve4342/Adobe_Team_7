@@ -40,6 +40,10 @@
 * **Git:** Ensure you have Git installed to clone the repository.
 * **Python:** You'll need Python to manage the project's dependencies and run Streamlit.
 * **Streamlit:** Install Streamlit using `pip install streamlit`.
+* **Requirements:** Install the project's dependencies using `pip install -r requirements.txt`.
+
+
+
 
 ### Steps:
 
@@ -53,17 +57,61 @@
     ```bash
     pip install -r requirements.txt
     ```
+* **Requirements:** In case there is an issue with the cairo library setup an environment using conda and install the cairosvg library using conda commands mentioned below.
 
-3. **Run the App:**
+3. create a new environment using conda
     ```bash
-    streamlit run app.py
+    conda create -n myenv python=3.12
     ```
 
-4. **Open the App:**
-    The app will open in your default browser on port 8501. You can now interact with the application and explore its features.
+4. activate the environment
+    ```bash
+    conda activate myenv
+    ```
 
-<!-- CONTACT -->
+5. install the cairosvg library
+    ```bash
+    conda install -c conda-forge cairosvg
+    ```
+
+- **Note:** If you are using a different environment manager, you can install the cairosvg library using the following command:
+    ```bash
+    pip install cairosvg
+    ```
+
+6. **for regularization of the curves, run the following command:**
+    ```bash
+    python main.py
+    ``` 
+
+- **Note:** If you want to change the image, simply replace the csv path in the main.py file by the path of the csv you want to regularize.:
+    ***line no. 5 of main.py file***
+
+- **Note:** Once you run the main.py file, the regularized curves will be showed in a new window but 2 windows will be showed. One will be the given image and one will be the regularized image. 
+
+7. **for Occlusion of the curves, run the following command:**
+    ```bash
+    python occlusion.py
+    ``` 
+
+- **Note:** If you want to change the image, simply replace the csv path in the occlusion.py file by the path of the csv you want to occlude.:
+    ***line no. 141 of occlusion.py file***
+
+- **Note:** Once you run the occlusion.py file, the output curves will be showed in a new window but 2 windows will be showed. One will be the given image and one will be the occluded image. 
+
+8. **for symmetry of the curves, run the following Notebook:**
+    ```bash
+    Symmetry.ipynb
+    ``` 
+
+- **Note:** The .ipynb will generate a image file in .svg format called polylines.svg which will be the output of the symmetry of the curves. In case you are not able to find the file try running the symmetry.py file. It works in the same way. If you want to use a different image, simply replace the argv[i] in the symmetry.py file by the path of the argument image you want to give to the python flie.:
+    ***line no. 183 of symmetry.py file***
+
+
+
 ## Contact
+
+***If there are any issues or queries, feel free to contact us. Please..***
 
 1. **Sanchit Chavan** - sanchitchavan3636@gmail.com
 2. **Kartik Kunjekar** - kunjekarkartik@gmail.com
