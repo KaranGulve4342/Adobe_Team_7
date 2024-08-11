@@ -65,6 +65,8 @@ png_file = paths_to_svg(polyline_paths, svg_file)
 print(f"Saved grayscale PNG to {png_file}")
 
 
+sift = cv2.SIFT_create()
+
 # Define the required functions
 def points_close(pt1, pt2, threshold=5.0):
     """Returns True if the two points are within a certain threshold distance."""
@@ -154,7 +156,7 @@ def detect_symmetry(image):
     plot_hexbin()
 
 # Example usage
-if __name__ == "__main__":
-    img = cv2.imread("C:\\Users\\KARAN\\Desktop\\polylines.png", 0)  # Replace with your image path
-    sift = cv2.SIFT_create()  # Initialize SIFT detector
-    detect_symmetry(img)
+# if __name__ == "__main__":
+#     img = cv2.imread("C:\\Users\\KARAN\\Desktop\\polylines.png", 0) 
+#     sift = cv2.SIFT_create() 
+#     detect_symmetry(img)
